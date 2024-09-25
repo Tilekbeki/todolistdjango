@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>To-Do List</title>
+</head>
+<body>
+    <section class="task">
+        <div class="container">
+            <h1 class="title title_task">To-Do List</h1>
+            <a href="{% url 'task_create' %}" class="button-add">Добавить</a>
+            <div class="task-list">
+            
+            <ul>
+                {% for task in tasks %}
+                    <li>
+                        <span class="task-item">{% if task.completed %} ✅ {% else %} 🎯 {% endif %}  {{ task.title }}</span>
+                        <div class="task-item__controls">
+                            <a href="{% url 'task_edit' task.pk %}" class="button-edit">Edit</a>
+                            <a href="{% url 'task_delete' task.pk %}" class="button-delete">Delete</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

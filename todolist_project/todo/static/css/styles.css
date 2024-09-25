@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+      
+}
+
+
+body {
+    background: rgb(148, 86, 192);
+}
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+.task {
+    padding: 40px 0;
+}
+
+.task-item_completed {
+    text-decoration: line-through;
+}
+
+.task-list {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.button-add {
+    background: rgb(105, 212, 128);
+    color: #fff;
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    
+}
+
+.button-delete {
+    background: rgb(220, 102, 47);
+    color: #000;
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    
+}
+
+
+.button-edit {
+    background: rgb(255, 255, 255);
+    color: #000;
+    width: 110px;
+    border: 1px solid  rgb(220, 102, 47);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-item__controls {
+    display: flex;
+    gap: 10px;
+}
+
+.title {
+    font-size: 48px;
+}
+
+.title_task {
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form button {
+    background-color: #4CAF50; /* Цвет кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем рамку */
+    padding: 10px 15px; /* Внутренние отступы кнопки */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета при наведении */
+    display: block;
+    width: 110px;
+}
